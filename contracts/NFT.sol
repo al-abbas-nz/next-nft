@@ -14,9 +14,9 @@ contract NFT is ERC721URIStorage {
     //the address of the marketplace that we want to allow the NFT to be able to interact with, and vise versa. (transact/change ownership from seperate contract.)
     address contractAddress;
 
-    constructor(address marketplaceAddres) ERC721("Metaverse Tokens", "METT"){
-        contractAddress = marketplaceAddress
-    };
+    constructor(address marketplaceAddress) ERC721("Metaverse Tokens", "METT") {
+        contractAddress = marketplaceAddress;
+    }
 
     //the function for minting tokens.
     function createToken(string memory tokenURI) public returns (uint) {
@@ -31,7 +31,7 @@ contract NFT is ERC721URIStorage {
         //allow transactions between users within another contract.
         setApprovalForAll(contractAddress, true);
         return newItemId;
-    };
+    }
 
 }
 

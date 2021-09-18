@@ -6,6 +6,7 @@ const fs = require('fs');
 const privateKey = fs.readFileSync('.secret').toString();
 
 const projectId = process.env.INFURA_PROJECT_ID;
+
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
