@@ -6,7 +6,6 @@ const fs = require('fs');
 const privateKey = fs.readFileSync('.secret').toString();
 
 const projectId = process.env.INFURA_PROJECT_ID;
-
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
@@ -18,11 +17,11 @@ module.exports = {
       chainId: 1337,
     },
     mumbai: {
-      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
+      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
       accounts: [privateKey],
     },
     mainnet: {
-      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
+      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
       accounts: [privateKey],
     },
   },
