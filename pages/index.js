@@ -20,7 +20,7 @@ export default function Home() {
   async function loadNFTs() {
     //establish connection to the smart contract
     const provider = new ethers.providers.JsonRpcProvider(
-      `https://polygon-mumbai.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_PROJECT_ID}`
+      'https://rpc-mumbai.maticvigil.com'
     );
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(
