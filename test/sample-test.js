@@ -19,6 +19,7 @@ describe('NFTMarket', function () {
     const auctionPrice = ethers.utils.parseUnits('100', 'ether');
 
     //created 2 nfts.
+    // await nft.createToken('https://weathered-cherry-8773.on.fleek.co/');
     await nft.createToken('https://www.mytokenlocation.com');
     await nft.createToken('https://www.mytokenlocation2.com');
 
